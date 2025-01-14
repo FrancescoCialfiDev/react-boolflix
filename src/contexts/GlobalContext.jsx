@@ -28,7 +28,7 @@ const GlobalProvider = ({ children }) => {
 
     return (
         <>
-            <GlobalContext.Provider value={{ movies, series }}>
+            <GlobalContext.Provider value={{ movies, series, setMovies, setSeries }}>
                 {children}
             </GlobalContext.Provider>
         </>
