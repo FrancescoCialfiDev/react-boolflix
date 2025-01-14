@@ -1,17 +1,17 @@
 /* GENERAL */
 * { padding: 0; margin: 0; box-sizing: border-box; }
-
 /* NAVABAR */
 #navMain { border-bottom: 3px solid #BB2D3B; }
-
 /* MAIN */
 main { -webkit-box-shadow: inset 0px 0px 66px 0px rgba(0,0,0,1); 
       -moz-box-shadow: inset 0px 0px 66px 0px rgba(0,0,0,1); 
        box-shadow: inset 0px 0px 66px 0px rgba(0,0,0,1); 
       min-height: calc(100vh - 100px);}
-
 /* HEADER */ 
 header { height: 100px; }
-
 /* EXTRA */
 .noContent  { min-height: calc(100vh - 100px); }
+/* FLAG */
+#flag{
+      width: 30px;
+}
