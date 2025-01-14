@@ -1,0 +1,5 @@
+/* GENERAL */
+* { padding: 0; margin: 0; box-sizing: border-box; }
+
+/* NAVABAR */
+#mainNav { border-bottom: 3px solid #BB2D3B; }
