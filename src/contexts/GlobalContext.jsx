@@ -1,26 +1,39 @@
-import { createContext } from "react"
-export const GlobalContext = createContext()
-import axios from "axios"
-import { useState, useEffect } from "react"
+import { createContext } from "react"  // Importiamo il metodo createContext di React
+const GlobalContext = createContext() // Creaiamo il contesto glovale creando un instanza del metodo createContext
+import axios from "axios"  // Importiamo la libreria axios per effettuare le chiamate API
+import { useState, useEffect } from "react"  // Importiamo lo useState e lo useEffect di React 
 
-export const GlobalProvider = ({ children }) => {
+const GlobalProvider = ({ children }) => {
 
-    const [data, setData] = useState([])
-    const getData = () => {
+    {/* Stato della variabile movies - Chiamata axios verso API film - Utilizzo di UseEffect*/ }
+    const [movies, setMovies] = useState([])
+    const getMovies = () => {
         axios.get(`${import.meta.env.VITE_BASE_URL}/movie/popular?${import.meta.env.VITE_API_KEY}&language=it-IT&page=1`)
-            .then((res) => { setData(res.data.results); console.log(res.data.results) })
+            .then((res) => setMovies(res.data.results))
             .catch((error) => console.log(error))
             .finally(console.log("Data Fetch Completed"))
     }
+    useEffect(getMovies, [])
 
-    useEffect(getData, [])
+    {/* Stato della variabile series - Chiamata axios verso API series - Utilizzo di UseEffect*/ }
+    const [series, setSeries] = useState([])
+    const getSeries = () => {
+        axios.get(`${import.meta.env.VITE_BASE_URL}/tv/popular?${import.meta.env.VITE_API_KEY}&language=it-IT&page=1`)
+            .then((res) => setSeries(res.data.results))
+            .catch((error) => console.log(error))
+            .finally(console.log("Data Fetch Completed"))
+    }
+    useEffect(getSeries, [])
+
 
     return (
         <>
-            <GlobalContext.Provider value={{ data }}>
+            <GlobalContext.Provider value={{ movies, series }}>
                 {children}
             </GlobalContext.Provider>
         </>
     )
 
 }
+
+export { GlobalProvider, GlobalContext }
