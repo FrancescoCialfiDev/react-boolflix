@@ -11,17 +11,19 @@ export const MainComponent = () => {
     return (
 
         <main className="bg-dark">
-            <div className="container">
-                <section className="row text-white">
-                    {movies.length > 0 && <h2 className="my-3">Movies</h2>}
-                    <CardComponent data={movies} />
-                </section>
-                {movies.length == 0 && series.length == 0 ? <div className="text-white">Nessun Contenuto Disponibile</div> : "null"}
-                <section className="row text-white">
-                    {series.length > 0 && <h2 className="my-3">TV Series</h2>}
-                    <CardComponent data={series} />
-                </section>
-            </div>
+            {movies.length === 0 && series.length === 0 ?
+                <div className="noContent d-flex justify-content-center align-items-center text-white">Nessun Contenuto Disponibile</div>
+                : <div className="container">
+                    <section className="row text-white">
+                        {movies.length > 0 && <h2 className="my-3">Movies</h2>}
+                        <CardComponent data={movies} />
+                    </section>
+
+                    <section className="row text-white">
+                        {series.length > 0 && <h2 className="my-3">TV Series</h2>}
+                        <CardComponent data={series} />
+                    </section>
+                </div>}
         </main >
 
     )
