@@ -18,14 +18,15 @@ export const CardComponent = ({ data }) => {
 
     return (
         data.map((element, index) => (
-            index < 8 && (
+            index < 6 && (
                 <div className="col-12 col-sm-6 col-md-3 col-xl-2 my-2" key={element.id}>
                     <div className="overlay position-relative">
                         <div id="card" className="card text-white">
                             <img
                                 src={`https://image.tmdb.org/t/p/w500${element.poster_path}`}
                                 className="card-img-top"
-                                alt={element.title || element.name || "Image Not Available"}
+                                alt={element.title || element.name}
+                                onError={(e) => e.target.src = "https://media.istockphoto.com/id/1147544807/it/vettoriale/la-commissione-per-la-immagine-di-anteprima-grafica-vettoriale.jpg?s=612x612&w=0&k=20&c=gsxHNYV71DzPuhyg-btvo-QhhTwWY0z4SGCSe44rvg4="}
                             />
                             <div className="content align-self-center position-absolute top-50 start-50 translate-middle h-100 w-100 p-3">
                                 <div className="centered d-flex flex-column justify-content-center align-items-center h-100 text-center">
@@ -37,7 +38,7 @@ export const CardComponent = ({ data }) => {
                                             id="flag"
                                             src={`https://flagsapi.com/${element.original_language?.toUpperCase()}/shiny/64.png`}
                                             className="mx-2 card-text"
-                                            onError={(e) => e.target.src = "https://flagsapi.com/BE/flat/64.png"}
+                                            onError={(e) => e.target.src = "https://media.istockphoto.com/id/1147544807/it/vettoriale/la-commissione-per-la-immagine-di-anteprima-grafica-vettoriale.jpg?s=612x612&w=0&k=20&c=gsxHNYV71DzPuhyg-btvo-QhhTwWY0z4SGCSe44rvg4="}
                                             alt="Language Flag"
                                         />
                                     </div>

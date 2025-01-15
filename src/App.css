@@ -1,48 +1,68 @@
 /* GENERAL */
-* { padding: 0; margin: 0; box-sizing: border-box; }
-/* NAVABAR */
-#navMain { border-bottom: 3px solid #BB2D3B; }
-/* MAIN */
-main { -webkit-box-shadow: inset 0px 0px 66px 0px rgba(0,0,0,1); 
-      -moz-box-shadow: inset 0px 0px 66px 0px rgba(0,0,0,1); 
-       box-shadow: inset 0px 0px 66px 0px rgba(0,0,0,1); 
-      min-height: calc(100vh - 100px);}
-/* HEADER */ 
-header { height: 100px; }
-/* EXTRA */
-.noContent  { min-height: calc(100vh - 100px); }
-/* FLAG */
-#flag{
-      width: 30px;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.content{
-      display: none !important;
-} 
-#card:hover .content{
-      display: block !important; 
-      background-color: rgba(0, 0, 0, 0.8); 
-      opacity: 1; 
-      transform: translate(1.2);
-      transition: opacity 0.5s ease, background-color 0.5s ease, transform 0.5s;
-
+/* NAVABAR */
+#navMain {
+}
+/* MAIN */
+main {
+  -webkit-box-shadow: inset 0px 0px 66px 0px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 0px 0px 66px 0px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px 0px 66px 0px rgba(0, 0, 0, 1);
+  min-height: calc(100vh - 100px);
+}
+/* HEADER */
+header {
+  height: 100px;
+}
+/* EXTRA */
+.noContent {
+  min-height: calc(100vh - 100px);
+}
+/* FLAG */
+#flag {
+  width: 30px;
+}
+.content {
+  display: none !important;
+}
+#card:hover .content {
+  display: block !important;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+  transform: translate(1.2);
+  transition: opacity 0.5s ease, background-color 0.5s ease, transform 0.5s;
 }
 #navMain li:hover {
-      background-color: #BB2D3B;
-      border-radius: 50% 20%;
+  background-color: #bb2d3b;
+  border-radius: 50% 20%;
 }
-#card img{
-      
-      -webkit-box-shadow: 0px 11px 21px 0px rgba(0,0,0,1) !important;
--moz-box-shadow: 0px 11px 21px 0px rgba(0,0,0,1) !important;
-box-shadow: 0px 11px 21px 0px rgba(0,0,0,1) !important;
+#card img {
+  min-height: 100%;
+  -webkit-box-shadow: 0px 11px 21px 0px rgba(0, 0, 0, 1) !important;
+  -moz-box-shadow: 0px 11px 21px 0px rgba(0, 0, 0, 1) !important;
+  box-shadow: 0px 11px 21px 0px rgba(0, 0, 0, 1) !important;
 }
-.overlay:hover{
-   transform: scale(1.2);
-   transition: transform 1s;
-   z-index: 1000;
+.overlay:hover {
+  transform: scale(1.2);
+  transition: transform 1s;
+  z-index: 1000;
 }
-#card{
-      background-color: #2bff0000;
-      border: 0;
-      border-radius: 50%;
+#card {
+  height: 250px;
+  background-color: #2bff0000;
+  border: 0;
+  border-radius: 50%;
+}
+.jumbo {
+  width: 100%;
+  height: 450px;
+  background-color: #bb2d3b;
+}
+.jumbo img {
+  height: 100%;
+  width: 100%;
 }

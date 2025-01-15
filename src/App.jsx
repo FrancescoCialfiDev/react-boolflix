@@ -2,6 +2,7 @@ import { HeaderComponent } from "./components/HeaderComponent" // Importiamo il 
 import { MainComponent } from "./components/MainComponent"     // Importiamo il componente Main dal path /components
 import { GlobalProvider } from "./contexts/GlobalContext"      // Importiamo il GlobalProvider dal GlobalContext
 
+
 export const App = () => {
 
     return (
