@@ -16,12 +16,13 @@ export const CardComponent = ({ data }) => {
         return stars;
     };
 
+
     return (
         data.map((element, index) => (
             index < 6 && (
-                <div className="col-12 col-sm-6 col-md-3 col-xl-2 my-2" key={element.id}>
+                <div className="col-12 col-sm-6 col-md-3 col-xl-2" key={element.id}>
                     <div className="overlay position-relative">
-                        <div id="card" className="card text-white">
+                        <div id="card" className="card text-white my-3">
                             <img
                                 src={`https://image.tmdb.org/t/p/w500${element.poster_path}`}
                                 className="card-img-top"

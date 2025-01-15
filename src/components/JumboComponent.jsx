@@ -2,7 +2,7 @@ export const JumboComponent = ({ data }) => {
     const firstItem = data[0];
 
     return (
-        <div className="jumbo position-relative top-0 start-0">
+        <div id={data.id} className="jumbo position-relative top-0 start-0">
             <img
                 src={`https://image.tmdb.org/t/p/original/${firstItem?.backdrop_path}`}
                 className="img-fluid"
