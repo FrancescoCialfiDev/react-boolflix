@@ -14,11 +14,11 @@ export const HeaderComponent = () => {
     }
 
     const getFiltredMovies = () => {
-        axios.get(`https://api.themoviedb.org/3/search/movie?query=${searchBar}&api_key=86b24d09f9325717c4b4c3faa40cb0f7&language=it-IT&page=1`)
+        axios.get(`https://api.themoviedb.org/3/search/movie?query=${searchBar}&${import.meta.env.VITE_API_KEY}&language=it-IT&page=1`)
             .then((res) => setMovies(res.data.results))
             .catch((error) => console.log(error))
             .finally(console.log("Data Fetch Completed"))
-        axios.get(`https://api.themoviedb.org/3/search/tv?query=${searchBar}&api_key=86b24d09f9325717c4b4c3faa40cb0f7&language=it-IT&page=1`)
+        axios.get(`https://api.themoviedb.org/3/search/tv?query=${searchBar}&${import.meta.env.VITE_API_KEY}&language=it-IT&page=1`)
             .then((res) => setSeries(res.data.results))
             .catch((error) => console.log(error))
             .finally(console.log("Data Fetch Completed"))
